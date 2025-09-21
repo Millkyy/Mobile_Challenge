@@ -28,6 +28,7 @@ https://www.figma.com/design/BYiRCM0Ay9LoOUVta1cN9R/InvestBot---Challenge-Mobile
 * **TypeScript**
 * **React Navigation** (Stack & Bottom Tabs)
 * **AsyncStorage** para persistência local de dados
+* **Styled-components** para estilização modular
 
 ## Estrutura
 
@@ -39,15 +40,33 @@ Mobile_Challenge/
 │  │  ├─ AppNavigator.tsx
 │  │  └─ HomeTabs.tsx
 │  ├─ screens/
-│  │  ├─ LoginScreen.tsx
-│  │  ├─ SignupScreen.tsx
-│  │  ├─ SimulationScreen.tsx
-│  │  ├─ RecommendationScreen.tsx
-│  │  ├─ LearningPathScreen.tsx
-│  │  └─ ProfileScreen.tsx
+│  │  ├─ LoginScreen/
+│  │  │  ├─ index.tsx
+│  │  │  ├─ styles.ts
+│  │  │  └─ services/authService.ts
+│  │  ├─ SignupScreen/
+│  │  │  ├─ index.tsx
+│  │  │  └─ hooks/useSignup.ts
+│  │  ├─ SimulationScreen/
+│  │  │  ├─ index.tsx
+│  │  │  ├─ styles.ts
+│  │  │  ├─ hooks/useSimulation.ts
+│  │  │  └─ models/questions.ts
+│  │  ├─ RecommendationScreen/
+│  │  │  ├─ index.tsx
+│  │  │  └─ components/RecommendationCard.tsx
+│  │  ├─ LearningPathScreen/
+│  │  │  ├─ index.tsx
+│  │  │  ├─ styles.ts
+│  │  │  └─ components/InputBar.tsx
+│  │  └─ ProfileScreen/
+│  │     ├─ index.tsx
+│  │     ├─ hooks/useProfileScreen.ts
+│  │     └─ components/LogoutButton.ts
 │  └─ assets/
 └─ package.json
 ```
+Essa estrutura facilita **manutenção**, **escalabilidade e testabilidade** do projeto, atendendo ao critério de organização de pastas e arquitetura.
 
 ## Instalação e Execução
 
@@ -116,5 +135,7 @@ Mobile_Challenge/
 Aline Fernandes Zeppelini - RM97966
 
 Camilly Breitbach Ishida - RM551474
+
+Jessica Witzler Costacurta – RM99068
 
 Julia Leite Galvão - RM550201
